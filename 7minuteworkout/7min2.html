@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center><div id="backgroundtable"><div id="texttable">Countdown timer</div>
+  <p id="timer">07:00</p>
+  <button onclick="startTimer(420)">Start 7 Minute workout</button>
+
+  <script>
+    let countdownInterval;
+
+    function startTimer(duration) {
+      clearInterval(countdownInterval); // Clear any existing timer
+      let timer = duration, minutes, seconds;
+      countdownInterval = setInterval(function () {
+        minutes = Math.floor(timer / 60);
+        seconds = timer % 60;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        document.getElementById('timer').textContent = minutes + ':' + seconds;
+        if (--timer < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById('timer').textContent = 'Time\'s up!';
+        }
+      }, 1000);
+    }
+  </script></div>
+</br>
+<div id="texttable">Leg Raises</div>
+</br>
+</center>
+<center>
+<button id="myButton" class="float-left submit-button" >Home</button>
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "./7min.html";
+        };
+        </script>
+</center>
+</body>
+</html>

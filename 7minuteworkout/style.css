@@ -1,0 +1,16 @@
+#backgroundtable
+{
+background-color:grey;
+height:500px;
+width:500px;
+}
+#texttable
+{
+color:red;
+}
+#timer
+{
+font-size: 2em;
+font-family: sans-serif;
+margin:20px;
+}
